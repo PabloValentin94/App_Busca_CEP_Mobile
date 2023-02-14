@@ -7,9 +7,7 @@
         
         <StackLayout>
 
-            <Label Text="Hello, World!"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
+            
 
         </StackLayout>
         
