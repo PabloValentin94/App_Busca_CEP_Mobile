@@ -11,13 +11,15 @@
 
             <ContentPage.Content>
 
-                <StackLayout>
+                <StackLayout BackgroundColor="#C90A02">
 
                     <ScrollView>
 
                         <StackLayout>
 
                             <Button x:Name="btn_bairros_por_cidade" Text="Bairros" Clicked="btn_bairros_por_cidade_Clicked"/>
+
+                            <Button x:Name="btn_ceps_por_logradouro" Text="CEPs" Clicked="btn_ceps_por_logradouro_Clicked"/>
 
                         </StackLayout>
 

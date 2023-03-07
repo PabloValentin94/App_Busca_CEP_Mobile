@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <resources>
 
   <style name="MainTheme" parent="MainTheme.Base">
@@ -14,5 +15,7 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
+	  
   </style>
+	
 </resources>

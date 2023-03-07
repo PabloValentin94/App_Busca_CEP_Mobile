@@ -4,8 +4,8 @@
              x:Class="App_Busca_CEP.Home">
     
     <ContentPage.Content>
-        
-        <StackLayout>
+
+        <StackLayout BackgroundColor="#171F25">
             
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 

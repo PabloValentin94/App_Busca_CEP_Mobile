@@ -2,7 +2,25 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Busca_CEP.App">
+    
     <Application.Resources>
 
+        <ResourceDictionary>
+
+            <!--
+            
+                Paleta de Cores:
+            
+                Cor 01: #F2EAB7
+                Cor 02: #C90A02
+                Cor 03: #752E2B
+                Cor 04: #171F25
+                Cor 05: #090F13
+            
+            -->
+            
+        </ResourceDictionary>
+
     </Application.Resources>
+    
 </Application>

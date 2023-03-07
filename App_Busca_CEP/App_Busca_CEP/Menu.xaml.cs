@@ -35,6 +35,15 @@ namespace App_Busca_CEP
 
         }
 
+        private void btn_ceps_por_logradouro_Clicked(object sender, EventArgs e)
+        {
+
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(CEPs_por_Logradouro)));
+
+            IsPresented = false;
+
+        }
+
     }
 
 }
