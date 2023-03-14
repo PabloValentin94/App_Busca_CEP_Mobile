@@ -12,6 +12,8 @@ namespace App_Busca_CEP.Model
 
         public string descricao { get; set; }
 
+        public int id_cidade { get; set; }
+
     }
 
 }

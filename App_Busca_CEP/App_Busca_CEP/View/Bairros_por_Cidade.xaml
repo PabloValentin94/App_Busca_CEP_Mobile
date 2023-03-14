@@ -5,9 +5,48 @@
     
     <ContentPage.Content>
         
-        <StackLayout>
+        <StackLayout Padding="10,0,10,0">
 
-            <Label Text="Início"/>
+            <StackLayout>
+
+                <SearchBar x:Name="txt_logradouro" Placeholder="Informe sua cidade aqui"/>
+                <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
+
+            </StackLayout>
+
+            <ActivityIndicator x:Name="ai_carregamento"/>
+
+            <ListView>
+
+                <ListView.Header>
+
+                    <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+
+                        <Label Text="Bairro" Grid.Column="0" Grid.Row="0"/>
+
+                    </Grid>
+                    
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+
+                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"/>
+
+                            </Grid>
+
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+                
+            </ListView>
 
         </StackLayout>
         

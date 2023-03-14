@@ -5,9 +5,16 @@
     
     <ContentPage.Content>
         
-        <StackLayout>
+        <StackLayout Padding="10,0,10,0">
 
-            <SearchBar/>
+            <StackLayout>
+
+                <SearchBar x:Name="txt_logradouro" Placeholder="Informe seu logradouro aqui"/>
+                <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
+
+            </StackLayout>
+
+            <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
             <ListView x:Name="listagem_ceps">
 
@@ -35,13 +42,13 @@
 
                             <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
 
-                                <Label Text="{ Binding CEP }" Grid.Column="0" Grid.Row="0"/>
+                                <Label Text="{ Binding cep }" Grid.Column="0" Grid.Row="0"/>
 
-                                <Label Text="{ Binding descricao_logradouro }" Grid.Column="1" Grid.Row="0"/>
+                                <Label Text="{ Binding descricao }" Grid.Column="1" Grid.Row="0"/>
 
                                 <Label Text="{ Binding descricao_cidade }" Grid.Column="2" Grid.Row="0"/>
 
-                                <Label Text="{ Binding UF }" Grid.Column="3" Grid.Row="0"/>
+                                <Label Text="{ Binding uf }" Grid.Column="3" Grid.Row="0"/>
 
                             </Grid>
 

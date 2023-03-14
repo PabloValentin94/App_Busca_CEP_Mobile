@@ -26,7 +26,12 @@ namespace App_Busca_CEP
 
         }
 
-        private void btn_bairros_por_cidade_Clicked(object sender, EventArgs e)
+        private void btn_endereco_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_bairros_Clicked(object sender, EventArgs e)
         {
 
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Bairros_por_Cidade)));
@@ -35,7 +40,17 @@ namespace App_Busca_CEP
 
         }
 
-        private void btn_ceps_por_logradouro_Clicked(object sender, EventArgs e)
+        private void btn_ruas_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cidades_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ceps_Clicked(object sender, EventArgs e)
         {
 
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(CEPs_por_Logradouro)));

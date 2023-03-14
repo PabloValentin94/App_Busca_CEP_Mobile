@@ -11,15 +11,27 @@
 
             <ContentPage.Content>
 
-                <StackLayout BackgroundColor="#C90A02">
+                <StackLayout BackgroundColor="#C90A02" Padding="10,0,10,0">
 
                     <ScrollView>
 
                         <StackLayout>
 
-                            <Button x:Name="btn_bairros_por_cidade" Text="Bairros" Clicked="btn_bairros_por_cidade_Clicked"/>
+                            <Label Text="Procurar pelo(a):"/>
 
-                            <Button x:Name="btn_ceps_por_logradouro" Text="CEPs" Clicked="btn_ceps_por_logradouro_Clicked"/>
+                            <StackLayout>
+
+                                <Button x:Name="btn_endereco" Text="Endereços" Clicked="btn_endereco_Clicked"/>
+
+                                <Button x:Name="btn_bairros" Text="Bairros" Clicked="btn_bairros_Clicked"/>
+
+                                <Button x:Name="btn_ruas" Text="Ruas" Clicked="btn_ruas_Clicked"/>
+
+                                <Button x:Name="btn_cidades" Text="Cidades" Clicked="btn_cidades_Clicked"/>
+
+                                <Button x:Name="btn_ceps" Text="CEP" Clicked="btn_ceps_Clicked"/>
+
+                            </StackLayout>
 
                         </StackLayout>
 
