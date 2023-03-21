@@ -9,7 +9,12 @@
 
             <StackLayout>
 
-                <SearchBar x:Name="txt_logradouro" Placeholder="Informe sua cidade aqui"/>
+                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged"></Picker>
+
+                <Picker x:Name="pck_cidade"
+                        ItemDisplayBinding="{ Binding descricao }"
+                        SelectedIndexChanged="pck_cidade_SelectedIndexChanged"></Picker>
+                
                 <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
 
             </StackLayout>
@@ -24,6 +29,10 @@
 
                         <Label Text="Bairro" Grid.Column="0" Grid.Row="0"/>
 
+                        <Label Text="Bairro" Grid.Column="0" Grid.Row="0"/>
+
+                        <Label Text="UF" Grid.Column="0" Grid.Row="0"/>
+
                     </Grid>
                     
                 </ListView.Header>
@@ -37,6 +46,10 @@
                             <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
                                 <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"/>
+
+                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"/>
+
+                                <Label Text="{ Binding uf }" Grid.Column="0" Grid.Row="0"/>
 
                             </Grid>
 

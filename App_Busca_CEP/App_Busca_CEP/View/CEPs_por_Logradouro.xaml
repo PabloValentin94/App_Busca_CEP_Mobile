@@ -10,6 +10,7 @@
             <StackLayout>
 
                 <SearchBar x:Name="txt_logradouro" Placeholder="Informe seu logradouro aqui"/>
+                
                 <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
 
             </StackLayout>
@@ -22,7 +23,7 @@
 
                     <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
 
-                        <Label Text="C.E.P." Grid.Column="0" Grid.Row="0"/>
+                        <Label Text="CEP" Grid.Column="0" Grid.Row="0"/>
                         
                         <Label Text="Logradouro" Grid.Column="1" Grid.Row="0"/>
 
