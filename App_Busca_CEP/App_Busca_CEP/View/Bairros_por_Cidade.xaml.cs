@@ -37,44 +37,97 @@ namespace App_Busca_CEP.View
 
             pck_estado.ItemsSource = estados;
             pck_cidade.ItemsSource = lista_cidades;
-            //lst
 
         }
 
-        private void btn_busca_Clicked(object sender, EventArgs e)
+        private async void btn_busca_Clicked(object sender, EventArgs e)
         {
 
+            try
+            {
 
+                btn_busca.IsEnabled = false;
+
+                ai_carregamento.IsRunning = true;
+
+                List<Bairro> lista_bairros_encontrados = this.lista_bairros.ToList();
+
+                listagem_bairros.ItemsSource = lista_bairros_encontrados;
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
+
+            finally
+            {
+
+                btn_busca.IsEnabled = true;
+
+                ai_carregamento.IsRunning = false;
+
+            }
 
         }
 
         private async void pck_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Picker picker_estado = sender as Picker;
+            try
+            {
 
-            string estado = picker_estado.SelectedItem as string;
+                Picker picker_estado = sender as Picker;
 
-            List<Cidade> listagem_cidades = await Data_Service.GetCidadesByUF(estado);
+                string estado = picker_estado.SelectedItem as string;
 
-            lista_cidades.Clear();
+                List<Cidade> listagem_cidades = await Data_Service.GetCidadesByUF(estado);
 
-            listagem_cidades.ForEach(i => lista_cidades.Add(i));
+                this.lista_cidades.Clear();
+
+                listagem_cidades.ForEach(i => lista_cidades.Add(i));
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 
         private async void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            /*Picker picker_cidade = sender as Picker;
+            try
+            {
 
-            Cidade cidade_selecionada = picker_cidade.SelectedItem as Cidade;
+                Picker picker_cidade = sender as Picker;
 
-            List<Bairro> lista_bairros = await Data_Service.GetBairrosByIDCidade(cidade_selecionada.id);
+                Cidade cidade_selecionada = picker_cidade.SelectedItem as Cidade;
 
-            lista_cidades.Clear();
+                //Console.WriteLine(cidade_selecionada);
+                //Console.WriteLine(cidade_selecionada.id_cidade);
 
-            lista_bairros.ForEach(i => lista_bairros.Add(i));*/
+                List<Bairro> listagem_bairros = await Data_Service.GetBairrosByIDCidade(cidade_selecionada.id_cidade);
+
+                this.lista_bairros.Clear();
+
+                listagem_bairros.ForEach(i => lista_bairros.Add(i));
+
+            }
+
+            catch(Exception ex)
+            {
+
+                await DisplayAlert("Erro!", ex.Message, "OK");
+
+            }
 
         }
 

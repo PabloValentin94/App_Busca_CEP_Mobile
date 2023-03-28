@@ -9,12 +9,20 @@ using Xamarin.Forms.Xaml;
 
 namespace App_Busca_CEP
 {
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
+
         public Home()
         {
+
             InitializeComponent();
+
+            logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
+
         }
+
     }
+
 }

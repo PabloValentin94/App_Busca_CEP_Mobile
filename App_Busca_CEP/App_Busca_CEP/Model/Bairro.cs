@@ -10,7 +10,7 @@ namespace App_Busca_CEP.Model
 
         public int id { get; set; }
 
-        public string descricao { get; set; }
+        public string descricao_bairro { get; set; }
 
         public int id_cidade { get; set; }
 

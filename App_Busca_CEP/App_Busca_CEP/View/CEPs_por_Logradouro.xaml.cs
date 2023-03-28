@@ -34,9 +34,9 @@ namespace App_Busca_CEP.View
 
                 ai_carregamento.IsRunning = true;
 
-                List<CEP> lista_ceps = await Data_Service.GetCEPByLogradouro(txt_logradouro.Text);
+                List<CEP> lista_ceps_encontrados = await Data_Service.GetCEPByLogradouro(txt_logradouro.Text);
 
-                listagem_ceps.ItemsSource = lista_ceps;
+                listagem_ceps.ItemsSource = lista_ceps_encontrados;
 
 
             }

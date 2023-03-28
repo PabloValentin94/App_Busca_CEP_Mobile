@@ -29,7 +29,7 @@
 
                         <Label Text="Cidade" Grid.Column="2" Grid.Row="0"/>
                         
-                        <Label Text="U.F." Grid.Column="3" Grid.Row="0"/>
+                        <Label Text="UF" Grid.Column="3" Grid.Row="0"/>
 
                     </Grid>
 

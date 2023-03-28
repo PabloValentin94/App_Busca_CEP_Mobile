@@ -19,19 +19,17 @@
 
             </StackLayout>
 
-            <ActivityIndicator x:Name="ai_carregamento"/>
+            <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
-            <ListView>
+            <ListView x:Name="listagem_bairros">
 
                 <ListView.Header>
 
                     <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
-                        <Label Text="Bairro" Grid.Column="0" Grid.Row="0"/>
-
-                        <Label Text="Bairro" Grid.Column="0" Grid.Row="0"/>
-
-                        <Label Text="UF" Grid.Column="0" Grid.Row="0"/>
+                        <Label Text="Bairro" Grid.Column="0" Grid.Row="0"
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
 
                     </Grid>
                     
@@ -45,11 +43,9 @@
 
                             <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
-                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"/>
-
-                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"/>
-
-                                <Label Text="{ Binding uf }" Grid.Column="0" Grid.Row="0"/>
+                                <Label Text="{ Binding descricao_bairro }" Grid.Column="0" Grid.Row="0"
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
 
                             </Grid>
 

@@ -8,7 +8,7 @@ namespace App_Busca_CEP.Model
     public class Cidade
     {
 
-        public int id { get; set; }
+        public int id_cidade { get; set; }
 
         public string descricao { get; set; }
 

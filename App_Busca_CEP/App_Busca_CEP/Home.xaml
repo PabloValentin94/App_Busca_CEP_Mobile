@@ -5,13 +5,15 @@
     
     <ContentPage.Content>
 
-        <StackLayout BackgroundColor="#171F25">
-            
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
-        </StackLayout>
+        <ScrollView BackgroundColor="#FFFFFF">
+
+            <StackLayout Padding="10,10,10,10" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <Image x:Name="logo" Aspect="AspectFit"/>
+
+            </StackLayout>
+
+        </ScrollView>
         
     </ContentPage.Content>
     
