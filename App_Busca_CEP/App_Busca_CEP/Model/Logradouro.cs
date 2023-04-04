@@ -38,9 +38,9 @@ namespace App_Busca_CEP.Model
 
         public string descricao_cidade { get; set; }
 
-        public string codigo_ibge_cidade { get; set; }
+        public string codigo_cidade_ibge { get; set; }
 
-        public string uf { get; set; }
+        public string UF { get; set; }
 
         public string descricao_bairro { get; set; }
 

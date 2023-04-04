@@ -29,6 +29,10 @@ namespace App_Busca_CEP
         private void btn_endereco_Clicked(object sender, EventArgs e)
         {
 
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Endereco_por_CEP)));
+
+            IsPresented = false;
+
         }
 
         private void btn_bairros_Clicked(object sender, EventArgs e)
@@ -43,10 +47,16 @@ namespace App_Busca_CEP
         private void btn_ruas_Clicked(object sender, EventArgs e)
         {
 
+
+
         }
 
         private void btn_cidades_Clicked(object sender, EventArgs e)
         {
+
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Cidades_por_Estado)));
+
+            IsPresented = false;
 
         }
 

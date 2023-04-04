@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Busca_CEP.View.Endereco_por_CEP">
+    
+    <ContentPage.Content>
+
+        <StackLayout Padding="10,0,10,0">
+
+            <StackLayout>
+
+                <SearchBar x:Name="txt_cep" Placeholder="Informe seu cep aqui"/>
+
+                <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
+
+            </StackLayout>
+
+            <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
+
+            <Label Text="Logradouro:"/>
+            <Label Text="{ Binding descricao }"/>
+
+            <Label Text="Tipo:"/>
+            <Label Text="{ Binding tipo }"/>
+
+            <Label Text="Estado:"/>
+            <Label Text="{ Binding UF }"/>
+
+            <Label Text="Complemento:"/>
+            <Label Text="{ Binding complemento }"/>
+
+            <Label Text="Código do IBGE:"/>
+            <Label Text="{ Binding codigo_cidade_ibge }"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>

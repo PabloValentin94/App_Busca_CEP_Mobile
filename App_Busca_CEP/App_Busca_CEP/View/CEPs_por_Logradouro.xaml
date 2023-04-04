@@ -21,7 +21,7 @@
 
                 <ListView.Header>
 
-                    <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
+                    <!--<Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
 
                         <Label Text="CEP" Grid.Column="0" Grid.Row="0"/>
                         
@@ -30,6 +30,19 @@
                         <Label Text="Cidade" Grid.Column="2" Grid.Row="0"/>
                         
                         <Label Text="UF" Grid.Column="3" Grid.Row="0"/>
+
+                    </Grid>-->
+
+                    <Grid ColumnDefinitions="*, *, *" RowDefinitions="Auto">
+
+                        <Label Text="CEP" Grid.Column="0" Grid.Row="0"
+                               HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                        <Label Text="Cidade" Grid.Column="2" Grid.Row="0"
+                               HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                        <Label Text="UF" Grid.Column="3" Grid.Row="0"
+                               HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                     </Grid>
 
@@ -41,7 +54,7 @@
 
                         <ViewCell>
 
-                            <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
+                            <!--<Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
 
                                 <Label Text="{ Binding cep }" Grid.Column="0" Grid.Row="0"/>
 
@@ -50,6 +63,19 @@
                                 <Label Text="{ Binding descricao_cidade }" Grid.Column="2" Grid.Row="0"/>
 
                                 <Label Text="{ Binding uf }" Grid.Column="3" Grid.Row="0"/>
+
+                            </Grid>-->
+
+                            <Grid ColumnDefinitions="*, *, *" RowDefinitions="Auto">
+
+                                <Label Text="{ Binding cep }" Grid.Column="0" Grid.Row="0"
+                                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                                <Label Text="{ Binding descricao_cidade }" Grid.Column="2" Grid.Row="0"
+                                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                                <Label Text="{ Binding uf }" Grid.Column="3" Grid.Row="0"
+                                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                             </Grid>
 

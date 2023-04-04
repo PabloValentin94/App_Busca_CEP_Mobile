@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Busca_CEP.View.Bairros_por_Cidade">
+             x:Class="App_Busca_CEP.View.Logradouro_por_Bairro_e_Cidade">
     
     <ContentPage.Content>
-        
+
         <StackLayout Padding="10,0,10,0">
 
             <StackLayout>
@@ -14,6 +14,10 @@
                 <Picker x:Name="pck_cidade"
                         ItemDisplayBinding="{ Binding descricao }"
                         SelectedIndexChanged="pck_cidade_SelectedIndexChanged"/>
+
+                <Picker x:Name="pck_bairro"
+                        ItemDisplayBinding="{ Binding descricao_bairro }"
+                        SelectedIndexChanged="pck_bairro_SelectedIndexChanged"/>
 
                 <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
 
@@ -32,7 +36,7 @@
                                HorizontalOptions="Center" VerticalOptions="Center"/>
 
                     </Grid>
-                    
+
                 </ListView.Header>
 
                 <ListView.ItemTemplate>
@@ -50,15 +54,15 @@
                             </Grid>
 
                         </ViewCell>
-                        
+
                     </DataTemplate>
-                    
+
                 </ListView.ItemTemplate>
-                
+
             </ListView>
 
         </StackLayout>
-        
+
     </ContentPage.Content>
     
 </ContentPage>

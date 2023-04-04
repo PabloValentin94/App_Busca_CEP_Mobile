@@ -1,19 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Busca_CEP.View.Bairros_por_Cidade">
+             x:Class="App_Busca_CEP.View.Cidades_por_Estado">
     
     <ContentPage.Content>
-        
+
         <StackLayout Padding="10,0,10,0">
 
             <StackLayout>
 
                 <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged"/>
-
-                <Picker x:Name="pck_cidade"
-                        ItemDisplayBinding="{ Binding descricao }"
-                        SelectedIndexChanged="pck_cidade_SelectedIndexChanged"/>
 
                 <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
 
@@ -21,18 +17,18 @@
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
-            <ListView x:Name="listagem_bairros">
+            <ListView x:Name="listagem_cidades">
 
                 <ListView.Header>
 
                     <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
-                        <Label Text="Bairros:" Grid.Column="0" Grid.Row="0"
+                        <Label Text="Cidades:" Grid.Column="0" Grid.Row="0"
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                                HorizontalOptions="Center" VerticalOptions="Center"/>
 
                     </Grid>
-                    
+
                 </ListView.Header>
 
                 <ListView.ItemTemplate>
@@ -43,22 +39,22 @@
 
                             <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
-                                <Label Text="{ Binding descricao_bairro }" Grid.Column="0" Grid.Row="0"
-                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"
+                                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
 
                             </Grid>
 
                         </ViewCell>
-                        
+
                     </DataTemplate>
-                    
+
                 </ListView.ItemTemplate>
-                
+
             </ListView>
 
         </StackLayout>
-        
+
     </ContentPage.Content>
     
 </ContentPage>
