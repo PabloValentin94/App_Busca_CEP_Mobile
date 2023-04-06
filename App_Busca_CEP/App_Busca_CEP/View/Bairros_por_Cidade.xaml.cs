@@ -37,7 +37,7 @@ namespace App_Busca_CEP.View
 
             pck_estado.ItemsSource = this.estados;
 
-            pck_cidade.ItemsSource = lista_cidades;
+            pck_cidade.ItemsSource = this.lista_cidades;
 
         }
 
@@ -87,12 +87,12 @@ namespace App_Busca_CEP.View
 
                 List<Cidade> listagem_cidades = await Data_Service.GetCidadesByUF(estado);
 
-                for (int i = 0; i < listagem_cidades.Count; i++)
+                /*for (int i = 0; i < listagem_cidades.Count; i++)
                 {
 
                     Console.WriteLine(listagem_cidades[i].descricao);
 
-                }
+                }*/
 
                 this.lista_cidades.Clear();
 

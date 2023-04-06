@@ -78,7 +78,7 @@ namespace App_Busca_CEP.Service
 
         }
 
-        public static async Task<List<Logradouro>> GetLogradouroByBairro(string bairro, int id_cidade)
+        public static async Task<List<Logradouro>> GetLogradouroByBairroAndIDCidade(string bairro, int id_cidade)
         {
 
             List<Logradouro> lista_logradouros = new List<Logradouro>();

@@ -47,7 +47,9 @@ namespace App_Busca_CEP
         private void btn_ruas_Clicked(object sender, EventArgs e)
         {
 
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Logradouro_por_Bairro_e_Cidade)));
 
+            IsPresented = false;
 
         }
 

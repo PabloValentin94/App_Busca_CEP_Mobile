@@ -25,13 +25,13 @@
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
-            <ListView x:Name="listagem_bairros">
+            <ListView x:Name="listagem_logradouros">
 
                 <ListView.Header>
 
                     <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
-                        <Label Text="Bairros:" Grid.Column="0" Grid.Row="0"
+                        <Label Text="Logradouros:" Grid.Column="0" Grid.Row="0"
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                                HorizontalOptions="Center" VerticalOptions="Center"/>
 
@@ -47,7 +47,7 @@
 
                             <Grid ColumnDefinitions="*" RowDefinitions="Auto">
 
-                                <Label Text="{ Binding descricao_bairro }" Grid.Column="0" Grid.Row="0"
+                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"
                                        HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                                        HorizontalOptions="Center" VerticalOptions="Center"/>
 
