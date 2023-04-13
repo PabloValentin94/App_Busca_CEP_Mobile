@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using App_Busca_CEP;
+
 namespace App_Busca_CEP
 {
 
@@ -19,7 +21,12 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
-            logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
+        }
+
+        private async void btn_opcoes_Clicked(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new Opcoes());
 
         }
 

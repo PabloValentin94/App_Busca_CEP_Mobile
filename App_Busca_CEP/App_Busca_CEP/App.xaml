@@ -18,6 +18,20 @@
                 Cor 05: #090F13
             
             -->
+
+            <Style x:Key="Titulos" TargetType="Label">
+
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="30"/>
+
+            </Style>
+
+            <Style x:Key="Botoes_Com_Imagem" TargetType="ImageButton">
+
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderColor" Value="#FF0000"/>
+
+            </Style>
             
         </ResourceDictionary>
 

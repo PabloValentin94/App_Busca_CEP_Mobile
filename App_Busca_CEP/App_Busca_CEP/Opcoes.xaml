@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Busca_CEP.Opcoes">
+    
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="Center">
+
+            <StackLayout Padding="10,15,10,15">
+
+                <!--<Label Text="Descubra qual é o seu endereco:" Style="{ StaticResource Titulos }"/>-->
+                <ImageButton x:Name="imgbtn_descobrir_endereco" Clicked="imgbtn_descobrir_cep_Clicked"
+                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+
+                <!--<Label Text="Descubra quais são os bairros de sua cidade:" Style="{ StaticResource Titulos }"/>-->
+                <ImageButton x:Name="imgbtn_descobrir_bairros" Clicked="imgbtn_descobrir_bairros_Clicked"
+                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+
+                <!--<Label Text="Descubra quais são os CEPs presentes no logradouro da sua moradia:" Style="{ StaticResource Titulos }"/>-->
+                <ImageButton x:Name="imgbtn_descobrir_ceps_logradouro" Clicked="imgbtn_descobrir_ceps_logradouro_Clicked"
+                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+
+                <!--<Label Text="Descubra quais são as cidades do estado em que você vive:" Style="{ StaticResource Titulos }"/>-->
+                <ImageButton x:Name="imgbtn_descobrir_cidades" Clicked="imgbtn_descobrir_cidades_Clicked"
+                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+
+                <!--<Label Text="Descubra qual o seu CEP:" Style="{ StaticResource Titulos }"/>-->
+                <ImageButton x:Name="imgbtn_descobrir_cep" Clicked="imgbtn_descobrir_cep_Clicked"
+                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+
+            </StackLayout>
+
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

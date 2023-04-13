@@ -7,9 +7,9 @@
 
         <ScrollView BackgroundColor="#FFFFFF">
 
-            <StackLayout Padding="10,10,10,10" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout Padding="10,10,10,10" HorizontalOptions="Center" VerticalOptions="Center">
 
-                <Image x:Name="logo" Aspect="AspectFit"/>
+                <Button x:Name="btn_opcoes" Clicked="btn_opcoes_Clicked"/>
 
             </StackLayout>
 
