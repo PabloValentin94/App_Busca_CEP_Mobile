@@ -21,15 +21,7 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
-            /*imgbtn_descobrir_endereco.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
-
-            imgbtn_descobrir_bairros.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
-
-            imgbtn_descobrir_ceps_logradouro.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
-
-            imgbtn_descobrir_cidades.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
-
-            imgbtn_descobrir_cep.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");*/
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 

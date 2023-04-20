@@ -5,7 +5,7 @@
     
     <ContentPage.Content>
         
-        <StackLayout Padding="10,0,10,0">
+        <StackLayout Spacing="15" Padding="10,0,10,0">
 
             <StackLayout>
 
@@ -21,7 +21,7 @@
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
-            <ListView x:Name="listagem_bairros">
+            <ListView x:Name="listagem_bairros" HasUnevenRows="True">
 
                 <ListView.Header>
 
@@ -41,14 +41,19 @@
 
                         <ViewCell>
 
-                            <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+                            <Frame VerticalOptions="Center"
+                                   BackgroundColor="Transparent" 
+                                   BorderColor="#000000">
 
-                                <Label Text="{ Binding descricao_bairro }" Grid.Column="0" Grid.Row="0"
-                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Text="{ Binding descricao_bairro }"
+                                       HorizontalTextAlignment="Center" 
+                                       VerticalTextAlignment="Center"
+                                       TextColor="Black"                                               
+                                       HorizontalOptions="CenterAndExpand" 
+                                       VerticalOptions="CenterAndExpand"/>
 
-                            </Grid>
-
+                            </Frame>
+                            
                         </ViewCell>
                         
                     </DataTemplate>
