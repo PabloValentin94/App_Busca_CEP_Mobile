@@ -26,9 +26,9 @@
 
             </Style>
 
-            <Style x:Key="Botoes_Com_Imagem" TargetType="ImageButton">
+            <Style x:Key="Botoes_Com_Imagem" TargetType="Button">
 
-                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderWidth" Value="2"/>
                 <Setter Property="BorderColor" Value="#FF0000"/>
 
             </Style>

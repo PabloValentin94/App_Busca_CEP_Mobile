@@ -9,25 +9,38 @@
 
             <StackLayout Padding="10,15,10,15">
 
-                <!--<Label Text="Descubra qual é o seu endereco:" Style="{ StaticResource Titulos }"/>-->
-                <ImageButton x:Name="imgbtn_descobrir_endereco" Clicked="imgbtn_descobrir_cep_Clicked"
-                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+                <Grid ColumnDefinitions="*, *" RowDefinitions="200, 250, 200" RowSpacing="15">
 
-                <!--<Label Text="Descubra quais são os bairros de sua cidade:" Style="{ StaticResource Titulos }"/>-->
-                <ImageButton x:Name="imgbtn_descobrir_bairros" Clicked="imgbtn_descobrir_bairros_Clicked"
-                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+                    <!--<Label Text="Descubra qual é o seu endereco:" Style="{ StaticResource Titulos }"/>-->
+                    <Button x:Name="imgbtn_descobrir_endereco" Clicked="imgbtn_descobrir_cep_Clicked"
+                            Style="{ StaticResource Botoes_Com_Imagem }"
+                            Grid.Column="0" Grid.Row="0"
+                            Text="Descobrir Meu Endereço"/>
 
-                <!--<Label Text="Descubra quais são os CEPs presentes no logradouro da sua moradia:" Style="{ StaticResource Titulos }"/>-->
-                <ImageButton x:Name="imgbtn_descobrir_ceps_logradouro" Clicked="imgbtn_descobrir_ceps_logradouro_Clicked"
-                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+                    <!--<Label Text="Descubra quais são os bairros de sua cidade:" Style="{ StaticResource Titulos }"/>-->
+                    <Button x:Name="imgbtn_descobrir_bairros" Clicked="imgbtn_descobrir_bairros_Clicked"
+                            Style="{ StaticResource Botoes_Com_Imagem }"
+                            Grid.Column="1" Grid.Row="0"
+                            Text="Descobrir os Bairros da minha Cidade"/>
 
-                <!--<Label Text="Descubra quais são as cidades do estado em que você vive:" Style="{ StaticResource Titulos }"/>-->
-                <ImageButton x:Name="imgbtn_descobrir_cidades" Clicked="imgbtn_descobrir_cidades_Clicked"
-                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+                    <!--<Label Text="Descubra qual o seu CEP:" Style="{ StaticResource Titulos }"/>-->
+                    <Button x:Name="imgbtn_descobrir_cep" Clicked="imgbtn_descobrir_cep_Clicked"
+                            Style="{ StaticResource Botoes_Com_Imagem }"
+                            Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                            Text="Descobrir Meu CEP"/>
 
-                <!--<Label Text="Descubra qual o seu CEP:" Style="{ StaticResource Titulos }"/>-->
-                <ImageButton x:Name="imgbtn_descobrir_cep" Clicked="imgbtn_descobrir_cep_Clicked"
-                             Style="{ StaticResource Botoes_Com_Imagem }"/>
+                    <!--<Label Text="Descubra quais são as cidades do estado em que você vive:" Style="{ StaticResource Titulos }"/>-->
+                    <Button x:Name="imgbtn_descobrir_cidades" Clicked="imgbtn_descobrir_cidades_Clicked"
+                            Style="{ StaticResource Botoes_Com_Imagem }"
+                            Grid.Column="0" Grid.Row="2"
+                            Text="Descobrir as Cidades do meu Estado"/>
+
+                    <!--<Label Text="Descubra quais são os CEPs presentes no logradouro da sua moradia:" Style="{ StaticResource Titulos }"/>-->
+                    <Button x:Name="imgbtn_descobrir_ceps_logradouro" Clicked="imgbtn_descobrir_ceps_logradouro_Clicked"
+                            Style="{ StaticResource Botoes_Com_Imagem }"
+                            Grid.Column="1" Grid.Row="2"/>
+
+                </Grid>
 
             </StackLayout>
 
