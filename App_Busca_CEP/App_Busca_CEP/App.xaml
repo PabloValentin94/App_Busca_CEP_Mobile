@@ -11,13 +11,15 @@
             
                 Paleta de Cores:
             
-                Cor 01: #F2EAB7
-                Cor 02: #C90A02
-                Cor 03: #752E2B
-                Cor 04: #171F25
-                Cor 05: #090F13
+                
             
             -->
+
+            <Style x:Key="Fundo_Paginas" TargetType="ContentPage">
+
+                <Setter Property="BackgroundColor" Value="#292929"/>
+
+            </Style>
 
             <Style x:Key="Titulos" TargetType="Label">
 
@@ -26,7 +28,7 @@
 
             </Style>
 
-            <Style x:Key="Botoes_Com_Imagem" TargetType="Button">
+            <Style x:Key="Botoes_Opcoes" TargetType="Button">
 
                 <Setter Property="BorderWidth" Value="2"/>
                 <Setter Property="BorderColor" Value="#FF0000"/>

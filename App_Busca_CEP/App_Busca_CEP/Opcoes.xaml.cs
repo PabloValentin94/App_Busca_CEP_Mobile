@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using App_Busca_CEP.View;
+
 namespace App_Busca_CEP
 {
 
@@ -19,7 +21,7 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
-            imgbtn_descobrir_endereco.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
+            /*imgbtn_descobrir_endereco.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
 
             imgbtn_descobrir_bairros.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
 
@@ -27,36 +29,45 @@ namespace App_Busca_CEP
 
             imgbtn_descobrir_cidades.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
 
-            imgbtn_descobrir_cep.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");
+            imgbtn_descobrir_cep.Source = ImageSource.FromResource("App.View.Assets.Images.Localizacao.png");*/
 
         }
 
-        private void imgbtn_descobrir_endereco_Clicked(object sender, EventArgs e)
+        private async void btn_descobrir_endereco_Clicked(object sender, EventArgs e)
         {
 
-
+            await Navigation.PushAsync(new Endereco_por_CEP());
 
         }
 
-        private void imgbtn_descobrir_bairros_Clicked(object sender, EventArgs e)
+        private async void btn_descobrir_bairros_cidade_Clicked(object sender, EventArgs e)
         {
 
+            await Navigation.PushAsync(new Bairros_por_Cidade());
+
         }
 
-        private void imgbtn_descobrir_ceps_logradouro_Clicked(object sender, EventArgs e)
+        private async void btn_descobrir_logradouros_bairro_Clicked(object sender, EventArgs e)
         {
 
+            await Navigation.PushAsync(new Logradouro_por_Bairro_e_Cidade());
+
         }
 
-        private void imgbtn_descobrir_cidades_Clicked(object sender, EventArgs e)
+        private async void btn_descobrir_cidades_estado_Clicked(object sender, EventArgs e)
         {
 
+            await Navigation.PushAsync(new Cidades_por_Estado());
+
         }
 
-        private void imgbtn_descobrir_cep_Clicked(object sender, EventArgs e)
+        private async void btn_descobrir_ceps_logradouro_Clicked(object sender, EventArgs e)
         {
 
+            await Navigation.PushAsync(new CEPs_por_Logradouro());
+
         }
+
     }
 
 }

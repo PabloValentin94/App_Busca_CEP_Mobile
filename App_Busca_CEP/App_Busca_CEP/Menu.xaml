@@ -1,37 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                  x:Class="App_Busca_CEP.Menu">
+                  x:Class="App_Busca_CEP.Menu"
+                  BackgroundColor="#000000">
 
     <!-- O que irá aparecer no Menu. -->
-    
+
     <MasterDetailPage.Master>
 
         <ContentPage Title="Menu">
 
             <ContentPage.Content>
 
-                <StackLayout BackgroundColor="#C90A02" Padding="10,0,10,0">
+                <StackLayout BackgroundColor="#000000" Padding="10,0,10,0">
 
                     <ScrollView>
 
                         <StackLayout>
 
-                            <Label Text="Procurar pelo(a):"/>
 
-                            <StackLayout>
-
-                                <Button x:Name="btn_endereco" Text="Endereços" Clicked="btn_endereco_Clicked"/>
-
-                                <Button x:Name="btn_bairros" Text="Bairros" Clicked="btn_bairros_Clicked"/>
-
-                                <Button x:Name="btn_ruas" Text="Ruas" Clicked="btn_ruas_Clicked"/>
-
-                                <Button x:Name="btn_cidades" Text="Cidades" Clicked="btn_cidades_Clicked"/>
-
-                                <Button x:Name="btn_ceps" Text="CEP" Clicked="btn_ceps_Clicked"/>
-
-                            </StackLayout>
 
                         </StackLayout>
 
@@ -42,15 +29,7 @@
             </ContentPage.Content>
 
         </ContentPage>
-        
-    </MasterDetailPage.Master>
-    
-    <!-- O que irá aparecer por trás do Menu. -->
 
-    <MasterDetailPage.Detail>
-        
-            
-        
-    </MasterDetailPage.Detail>
-    
+    </MasterDetailPage.Master>
+
 </MasterDetailPage>

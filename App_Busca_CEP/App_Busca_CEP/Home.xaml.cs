@@ -21,6 +21,8 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
+            img_logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
+
         }
 
         private async void btn_opcoes_Clicked(object sender, EventArgs e)
