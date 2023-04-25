@@ -17,19 +17,13 @@
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
+            <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
+
+                <Label Text="Cidades:" Style="{ StaticResource Label_Listagem }"/>
+
+            </Frame>
+
             <ListView x:Name="listagem_cidades">
-
-                <ListView.Header>
-
-                    <Grid ColumnDefinitions="*" RowDefinitions="Auto">
-
-                        <Label Text="Cidades:" Grid.Column="0" Grid.Row="0"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                               HorizontalOptions="Center" VerticalOptions="Center"/>
-
-                    </Grid>
-
-                </ListView.Header>
 
                 <ListView.ItemTemplate>
 
@@ -37,13 +31,12 @@
 
                         <ViewCell>
 
-                            <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+                            <Frame Style="{ StaticResource Frame_Listagem_Campos }">
 
-                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"
-                                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Text="{ Binding descricao }"
+                                       Style="{ StaticResource Label_Listagem }"/>
 
-                            </Grid>
+                            </Frame>
 
                         </ViewCell>
 

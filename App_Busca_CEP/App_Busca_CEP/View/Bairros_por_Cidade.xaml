@@ -21,19 +21,13 @@
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
+            <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
+
+                <Label Text="Bairros:" Style="{ StaticResource Label_Listagem }"/>
+
+            </Frame>
+
             <ListView x:Name="listagem_bairros" HasUnevenRows="True">
-
-                <ListView.Header>
-
-                    <Grid ColumnDefinitions="*" RowDefinitions="Auto">
-
-                        <Label Text="Bairros:" Grid.Column="0" Grid.Row="0"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                               HorizontalOptions="Center" VerticalOptions="Center"/>
-
-                    </Grid>
-                    
-                </ListView.Header>
 
                 <ListView.ItemTemplate>
 
@@ -41,16 +35,10 @@
 
                         <ViewCell>
 
-                            <Frame VerticalOptions="Center"
-                                   BackgroundColor="Transparent" 
-                                   BorderColor="#000000">
+                            <Frame Style="{ StaticResource Frame_Listagem_Campos }">
 
                                 <Label Text="{ Binding descricao_bairro }"
-                                       HorizontalTextAlignment="Center" 
-                                       VerticalTextAlignment="Center"
-                                       TextColor="Black"                                               
-                                       HorizontalOptions="CenterAndExpand" 
-                                       VerticalOptions="CenterAndExpand"/>
+                                       Style="{ StaticResource Label_Listagem }"/>
 
                             </Frame>
                             
