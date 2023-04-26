@@ -10,7 +10,8 @@
 
             <StackLayout>
 
-                <SearchBar x:Name="txt_logradouro" Placeholder="Informe seu logradouro aqui"/>
+                <SearchBar x:Name="txt_logradouro" TextColor="#FFFFFF"
+                           Placeholder="Informe seu logradouro aqui"/>
                 
                 <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
 
@@ -20,7 +21,7 @@
 
             <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
 
-                <Label Text="CEP" Style="{ StaticResource Label_Listagem }"/>
+                <Label Text="CEPs" Style="{ StaticResource Label_Listagem }"/>
 
             </Frame>
 

@@ -10,7 +10,8 @@
 
             <StackLayout>
 
-                <SearchBar x:Name="txt_cep" Placeholder="Informe seu cep aqui"/>
+                <SearchBar x:Name="txt_cep" TextColor="#FFFFFF"
+                           Placeholder="Informe seu cep aqui"/>
 
                 <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
 

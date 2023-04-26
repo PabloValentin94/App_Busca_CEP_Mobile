@@ -10,9 +10,10 @@
 
             <StackLayout>
 
-                <Picker x:Name="pck_estado" SelectedIndexChanged="pck_estado_SelectedIndexChanged"/>
+                <Picker x:Name="pck_estado"  TextColor="#FFFFFF"
+                        SelectedIndexChanged="pck_estado_SelectedIndexChanged"/>
 
-                <Picker x:Name="pck_cidade"
+                <Picker x:Name="pck_cidade" TextColor="#FFFFFF"
                         ItemDisplayBinding="{ Binding descricao }"
                         SelectedIndexChanged="pck_cidade_SelectedIndexChanged"/>
 
@@ -24,7 +25,7 @@
 
             <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
 
-                <Label Text="Bairros:" Style="{ StaticResource Label_Listagem }"/>
+                <Label Text="BAIRROS" Style="{ StaticResource Label_Listagem }"/>
 
             </Frame>
 
