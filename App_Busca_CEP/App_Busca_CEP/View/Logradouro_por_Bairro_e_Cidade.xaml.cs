@@ -138,11 +138,13 @@ namespace App_Busca_CEP.View
 
                 Picker picker_bairro = sender as Picker;
 
+                Cidade picker_cidade = pck_cidade.SelectedItem as Cidade;
+
                 Bairro bairro_selecionado = picker_bairro.SelectedItem as Bairro;
 
                 List<Logradouro> listagem_logradouros = 
-                await Data_Service.GetLogradouroByBairroAndIDCidade(bairro_selecionado.descricao_bairro, 
-                                                                    bairro_selecionado.id_cidade);
+                await Data_Service.GetLogradouroByBairroAndIDCidade(bairro_selecionado.descricao_bairro,
+                                                                    picker_cidade.id_cidade);
 
                 this.lista_logradouros.Clear();
 

@@ -22,7 +22,8 @@ namespace App_Busca_CEP.Service
             using (HttpClient cliente = new HttpClient())
             {
 
-                HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/endereco/by-cep?cep=" + cep);
+                //HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/endereco/by-cep?cep=" + cep);
+                HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/endereco/by-cep?cep=" + cep);
 
                 if (resposta.IsSuccessStatusCode)
                 {
@@ -54,9 +55,10 @@ namespace App_Busca_CEP.Service
             using(HttpClient cliente = new HttpClient())
             {
 
-                HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
+                //HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
+                HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/bairro/by-cidade?id_cidade=" + id_cidade);
 
-                if(resposta.IsSuccessStatusCode)
+                if (resposta.IsSuccessStatusCode)
                 {
 
                     string json = resposta.Content.ReadAsStringAsync().Result;
@@ -86,9 +88,10 @@ namespace App_Busca_CEP.Service
             using(HttpClient cliente = new HttpClient())
             {
 
-                HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=" + id_cidade + "&bairro=" + bairro);
+                //HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=" + id_cidade + "&bairro=" + bairro);
+                HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/logradouro/by-bairro?id_cidade=" + id_cidade + "&bairro=" + bairro);
 
-                if(resposta.IsSuccessStatusCode)
+                if (resposta.IsSuccessStatusCode)
                 {
 
                     string json = resposta.Content.ReadAsStringAsync().Result;
@@ -118,9 +121,10 @@ namespace App_Busca_CEP.Service
             using(HttpClient cliente = new HttpClient())
             {
 
-                HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=" + uf);
+                //HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=" + uf);
+                HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/cidade/by-uf?uf=" + uf);
 
-                if(resposta.IsSuccessStatusCode)
+                if (resposta.IsSuccessStatusCode)
                 {
 
                     string json = resposta.Content.ReadAsStringAsync().Result;
@@ -150,9 +154,10 @@ namespace App_Busca_CEP.Service
             using(HttpClient cliente = new HttpClient())
             {
 
-                HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + logradouro);
+                //HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + logradouro);
+                HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/cep/by-logradouro?logradouro=" + logradouro);
 
-                if(resposta.IsSuccessStatusCode)
+                if (resposta.IsSuccessStatusCode)
                 {
 
                     string json = resposta.Content.ReadAsStringAsync().Result;

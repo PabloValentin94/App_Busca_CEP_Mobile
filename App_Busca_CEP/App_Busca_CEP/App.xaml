@@ -58,6 +58,8 @@
 
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="TextColor" Value="#FFFFFF"/>
 
             </Style>

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Busca_CEP.View.Logradouro_por_Bairro_e_Cidade">
+             x:Class="App_Busca_CEP.View.Logradouro_por_Bairro_e_Cidade"
+             Style="{ StaticResource Fundo_Paginas }">
     
     <ContentPage.Content>
 
@@ -25,19 +26,13 @@
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
-            <ListView x:Name="listagem_logradouros">
+            <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
 
-                <ListView.Header>
+                <Label Text="Logradouros:" Style="{ StaticResource Label_Listagem }"/>
 
-                    <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+            </Frame>
 
-                        <Label Text="Logradouros:" Grid.Column="0" Grid.Row="0"
-                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                               HorizontalOptions="Center" VerticalOptions="Center"/>
-
-                    </Grid>
-
-                </ListView.Header>
+            <ListView x:Name="listagem_logradouros" HasUnevenRows="True">
 
                 <ListView.ItemTemplate>
 
@@ -45,13 +40,12 @@
 
                         <ViewCell>
 
-                            <Grid ColumnDefinitions="*" RowDefinitions="Auto">
+                            <Frame Style="{ StaticResource Frame_Listagem_Campos }">
 
-                                <Label Text="{ Binding descricao }" Grid.Column="0" Grid.Row="0"
-                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Text="{ Binding descricao }"
+                                       Style="{ StaticResource Label_Listagem }"/>
 
-                            </Grid>
+                            </Frame>
 
                         </ViewCell>
 

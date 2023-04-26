@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Busca_CEP.View.Cidades_por_Estado">
+             x:Class="App_Busca_CEP.View.Cidades_por_Estado"
+             Style="{ StaticResource Fundo_Paginas }">
     
     <ContentPage.Content>
 
@@ -23,7 +24,7 @@
 
             </Frame>
 
-            <ListView x:Name="listagem_cidades">
+            <ListView x:Name="listagem_cidades" HasUnevenRows="True">
 
                 <ListView.ItemTemplate>
 
@@ -34,7 +35,9 @@
                             <Frame Style="{ StaticResource Frame_Listagem_Campos }">
 
                                 <Label Text="{ Binding descricao }"
-                                       Style="{ StaticResource Label_Listagem }"/>
+                                       Style="{ StaticResource Label_Listagem }"
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"/>
 
                             </Frame>
 
