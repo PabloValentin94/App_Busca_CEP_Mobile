@@ -15,25 +15,18 @@
             
             -->
 
-            <Style x:Key="Fundo_Paginas" TargetType="ContentPage">
+            <Style x:Key="Fundo_Paginas" TargetType="Page">
 
-                <Setter Property="BackgroundColor" Value="#292929"/>
+                <Setter Property="BackgroundColor" Value="#111111"/>
 
             </Style>
 
-            <Style x:Key="Titulos" TargetType="Label">
+            <!--<Style x:Key="Titulos" TargetType="Label">
 
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="FontSize" Value="30"/>
 
-            </Style>
-
-            <Style x:Key="Botoes_Opcoes" TargetType="Button">
-
-                <Setter Property="BorderWidth" Value="2"/>
-                <Setter Property="BorderColor" Value="#FF0000"/>
-
-            </Style>
+            </Style>-->
 
             <Style x:Key="Frame_Listagem" TargetType="Frame">
 
@@ -44,7 +37,7 @@
 
             <Style x:Key="Frame_Listagem_Titulos" TargetType="Frame" BaseResourceKey="Frame_Listagem">
 
-                <Setter Property="BorderColor" Value="#FF0000"/>
+                <Setter Property="BorderColor" Value="#4682B4"/>
 
             </Style>
 

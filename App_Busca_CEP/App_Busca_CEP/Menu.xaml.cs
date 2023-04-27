@@ -22,7 +22,23 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
+            img_logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
+
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Home)));
+
+        }
+
+        private void btn_sobre_escola_Clicked(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void btn_sobre_curso_DS_Clicked(object sender, EventArgs e)
+        {
+
+
 
         }
 

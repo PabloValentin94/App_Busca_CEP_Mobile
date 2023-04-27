@@ -21,7 +21,7 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.SetHasNavigationBar(this, false);
 
         }
 

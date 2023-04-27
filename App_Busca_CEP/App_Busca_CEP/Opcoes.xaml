@@ -2,40 +2,116 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Busca_CEP.Opcoes"
+             Title="Opções"
              Style="{ StaticResource Fundo_Paginas }">
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="Botoes_Opcoes" TargetType="Button">
+
+                <Setter Property="BorderWidth" Value="5"/>
+                <Setter Property="BorderColor" Value="#4682B4"/>
+                <Setter Property="CornerRadius" Value="150"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+
+            </Style>
+
+            <Style x:Key="Agrupamentos" TargetType="StackLayout">
+
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+
+            </Style>
+
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
     
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="Center">
 
-            <StackLayout Padding="10,15,10,15">
+            <StackLayout Style="{ StaticResource Agrupamentos }">
 
-                <Grid ColumnDefinitions="*, *" RowDefinitions="200, 250, 200" RowSpacing="15">
+                <Grid ColumnDefinitions="*" RowDefinitions="220, 220, 220, 220, 220">
 
-                    <Button x:Name="btn_descobrir_logradouros_bairro" Clicked="btn_descobrir_logradouros_bairro_Clicked"
-                            Style="{ StaticResource Botoes_Opcoes }"
-                            Grid.Column="0" Grid.Row="0"
-                            Text="Descubra os Logradouros do seu Bairro"/>
+                    <StackLayout Grid.Column="0" Grid.Row="0" Style="{ StaticResource Agrupamentos }">
 
-                    <Button x:Name="btn_descobrir_bairros_cidade" Clicked="btn_descobrir_bairros_cidade_Clicked"
-                            Style="{ StaticResource Botoes_Opcoes }"
-                            Grid.Column="1" Grid.Row="0"
-                            Text="Descubra os Bairros da sua Cidade"/>
+                        <Grid ColumnDefinitions="170" RowDefinitions="170"
+                              VerticalOptions="Center" Padding="5">
 
-                    <Button x:Name="btn_descobrir_endereco" Clicked="btn_descobrir_endereco_Clicked"
-                            Style="{ StaticResource Botoes_Opcoes }"
-                            Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
-                            Text="Descubra seu Endereço"/>
+                            <Button x:Name="btn_descobrir_logradouros_bairro"
+                                    Clicked="btn_descobrir_logradouros_bairro_Clicked"
+                                    Style="{ StaticResource Botoes_Opcoes }"
+                                    Text="Descubra os Logradouros do seu Bairro"
+                                    Grid.Column="0" Grid.Row="0"/>
 
-                    <Button x:Name="btn_descobrir_cidades_estado" Clicked="btn_descobrir_cidades_estado_Clicked"
-                            Style="{ StaticResource Botoes_Opcoes }"
-                            Grid.Column="0" Grid.Row="2"
-                            Text="Descubra as Cidades do seu Estado"/>
+                        </Grid>
 
-                    <Button x:Name="btn_descobrir_ceps_logradouro" Clicked="btn_descobrir_ceps_logradouro_Clicked"
-                            Style="{ StaticResource Botoes_Opcoes }"
-                            Grid.Column="1" Grid.Row="2"
-                            Text="Descubra os CEPs do seu Logradouro"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0" Grid.Row="1" Style="{ StaticResource Agrupamentos }">
+
+                        <Grid ColumnDefinitions="170" RowDefinitions="170"
+                              VerticalOptions="Center" Padding="5">
+
+                            <Button x:Name="btn_descobrir_bairros_cidade"
+                                    Clicked="btn_descobrir_bairros_cidade_Clicked"
+                                    Style="{ StaticResource Botoes_Opcoes }"
+                                    Text="Descubra os Bairros da sua Cidade"
+                                    Grid.Column="0" Grid.Row="0"/>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0" Grid.Row="2" Style="{ StaticResource Agrupamentos }">
+
+                        <Grid ColumnDefinitions="170" RowDefinitions="170"
+                              VerticalOptions="Center" Padding="5">
+
+                            <Button x:Name="btn_descobrir_endereco"
+                                    Clicked="btn_descobrir_endereco_Clicked"
+                                    Style="{ StaticResource Botoes_Opcoes }"
+                                    Text="Descubra seu Endereço"
+                                    Grid.Column="0" Grid.Row="0"/>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0" Grid.Row="3" Style="{ StaticResource Agrupamentos }">
+
+                        <Grid ColumnDefinitions="170" RowDefinitions="170"
+                              VerticalOptions="Center" Padding="5">
+
+                            <Button x:Name="btn_descobrir_cidades_estado"
+                                    Clicked="btn_descobrir_cidades_estado_Clicked"
+                                    Style="{ StaticResource Botoes_Opcoes }"
+                                    Text="Descubra as Cidades do seu Estado"
+                                    Grid.Column="0" Grid.Row="0"/>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0" Grid.Row="4" Style="{ StaticResource Agrupamentos }">
+
+                        <Grid ColumnDefinitions="170" RowDefinitions="170"
+                              VerticalOptions="Center" Padding="5">
+
+                            <Button x:Name="btn_descobrir_ceps_logradouro"
+                                    Clicked="btn_descobrir_ceps_logradouro_Clicked"
+                                    Style="{ StaticResource Botoes_Opcoes }"
+                                    Text="Descubra os CEPs do seu Logradouro"
+                                    Grid.Column="0" Grid.Row="0"/>
+
+                        </Grid>
+
+                    </StackLayout>
 
                 </Grid>
 

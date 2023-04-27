@@ -2,7 +2,7 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   x:Class="App_Busca_CEP.Menu"
-                  BackgroundColor="#000000">
+                  Style="{ StaticResource Fundo_Paginas }">
 
     <!-- O que irá aparecer no Menu. -->
 
@@ -12,15 +12,39 @@
 
             <ContentPage.Content>
 
-                <StackLayout BackgroundColor="#000000" Padding="10,0,10,0">
+                <StackLayout BackgroundColor="#111111" Padding="15">
 
                     <ScrollView>
 
-                        <StackLayout>
+                        <Grid ColumnDefinitions="*" RowDefinitions="200, Auto">
 
+                            <StackLayout Grid.Column="0" Grid.Row="0"
+                                         BackgroundColor="#FFFFFF"
+                                         VerticalOptions="Center"
+                                         Padding="10">
 
+                                <Grid ColumnDefinitions="*" RowDefinitions="*">
 
-                        </StackLayout>
+                                    <Image x:Name="img_logo" Aspect="Fill"
+                                           Grid.Column="0" Grid.Row="0"/>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+
+                                <Button x:Name="btn_sobre_escola"
+                                        Text="Sobre a Escola"
+                                        Clicked="btn_sobre_escola_Clicked"/>
+
+                                <Button x:Name="btn_sobre_curso_DS"
+                                        Text="Sobre o curso de Desenvolvimento de Sistemas"
+                                        Clicked="btn_sobre_curso_DS_Clicked"/>
+
+                            </StackLayout>
+
+                        </Grid>
 
                     </ScrollView>
 
