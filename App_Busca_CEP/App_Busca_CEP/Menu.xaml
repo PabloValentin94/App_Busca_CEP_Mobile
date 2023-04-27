@@ -43,9 +43,9 @@
                       BackgroundColor="Transparent" Padding="15">
 
                     <Frame Grid.Column="0" Grid.Row="0"
-                                   BackgroundColor="#4682B4"
-                                   VerticalOptions="Center" Padding="10"
-                                   BorderColor="#FFFFFF" CornerRadius="10">
+                           BackgroundColor="#4682B4"
+                           VerticalOptions="Center" Padding="10"
+                           BorderColor="#FFFFFF" CornerRadius="10">
 
                         <StackLayout>
 
@@ -60,34 +60,37 @@
 
                     </Frame>
 
-                    <StackLayout Grid.Column="0" Grid.Row="1"
-                                         Spacing="15">
+                    <ScrollView Grid.Column="0" Grid.Row="1">
 
-                        <Label Text="Página Inicial:" Style="{ StaticResource Label_Menu }"/>
+                        <StackLayout Spacing="15">
 
-                        <Button x:Name="btn_home"
-                                Text="Home"
-                                Clicked="btn_home_Clicked"
-                                Style="{ StaticResource Botoes_Menu }"/>
+                            <Label Text="Página Inicial:" Style="{ StaticResource Label_Menu }"/>
 
-                        <Label Text="Informações sobre os envolvidos:" Style="{ StaticResource Label_Menu }"/>
+                            <Button x:Name="btn_home"
+                                    Text="Home"
+                                    Clicked="btn_home_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
 
-                        <Button x:Name="btn_sobre_escola"
-                                Text="Sobre a Escola"
-                                Clicked="btn_sobre_escola_Clicked"
-                                Style="{ StaticResource Botoes_Menu }"/>
+                            <Label Text="Informações sobre os envolvidos:" Style="{ StaticResource Label_Menu }"/>
 
-                        <Button x:Name="btn_sobre_curso_DS"
-                                Text="Sobre o curso de Desenvolvimento de Sistemas"
-                                Clicked="btn_sobre_curso_DS_Clicked"
-                                Style="{ StaticResource Botoes_Menu }"/>
+                            <Button x:Name="btn_sobre_escola"
+                                    Text="Sobre a Escola"
+                                    Clicked="btn_sobre_escola_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
 
-                        <Button x:Name="btn_sobre_turma"
-                                Text="Sobre a Turma"
-                                Clicked="btn_sobre_turma_Clicked"
-                                Style="{ StaticResource Botoes_Menu }"/>
+                            <Button x:Name="btn_sobre_curso_DS"
+                                    Text="Sobre o curso de Desenvolvimento de Sistemas"
+                                    Clicked="btn_sobre_curso_DS_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
 
-                    </StackLayout>
+                            <Button x:Name="btn_sobre_turma"
+                                    Text="Sobre a Turma"
+                                    Clicked="btn_sobre_turma_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
+
+                        </StackLayout>
+
+                    </ScrollView>
 
                 </Grid>
 

@@ -9,7 +9,7 @@
 
         <ScrollView VerticalOptions="Center">
 
-            <StackLayout Padding="10,10,10,10" Spacing="15">
+            <StackLayout Padding="10" Spacing="15">
 
                 <!--<Image x:Name="img_logo" Aspect="AspectFit"/>-->
 

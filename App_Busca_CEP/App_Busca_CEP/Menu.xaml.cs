@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using App_Busca_CEP.View;
+using App_Busca_CEP.View.Pages.Menu;
 
 namespace App_Busca_CEP
 {
@@ -31,26 +32,36 @@ namespace App_Busca_CEP
         private void btn_home_Clicked(object sender, EventArgs e)
         {
 
+            Detail = new NavaigationPage((Page)Activator.CreateInstance(typeof(Home)));
 
+            IsPresented = false;
 
         }
 
         private void btn_sobre_escola_Clicked(object sender, EventArgs e)
         {
 
+            Detail = new NavaigationPage((Page)Activator.CreateInstance(typeof(Sobre_a_Escola)));
 
+            IsPresented = false;
 
         }
 
         private void btn_sobre_curso_DS_Clicked(object sender, EventArgs e)
         {
 
+            Detail = new NavaigationPage((Page)Activator.CreateInstance(typeof(Sobre_o_Curso)));
 
+            IsPresented = false;
 
         }
 
         private void btn_sobre_turma_Clicked(object sender, EventArgs e)
         {
+
+            Detail = new NavaigationPage((Page)Activator.CreateInstance(typeof(Sobre_a_Turma)));
+
+            IsPresented = false;
 
         }
 
