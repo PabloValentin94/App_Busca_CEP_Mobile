@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using App_Busca_CEP;
+using App_Busca_CEP.View.Pages;
 
 namespace App_Busca_CEP
 {

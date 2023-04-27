@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\Endereco_por_CEP.xaml.cs">
+    <Compile Update="View\Pages\Options\Endereco_por_CEP.xaml.cs">
       <DependentUpon>Endereco_por_CEP.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -39,7 +39,16 @@
     <EmbeddedResource Update="Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Opcoes.xaml">
+    <EmbeddedResource Update="View\Pages\Menu\Sobre_a_Escola.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pages\Menu\Sobre_a_Turma.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pages\Menu\Sobre_o_Curso.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pages\Opcoes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pages\Options\CEPs_por_Logradouro.xaml">
@@ -54,9 +63,5 @@
     <EmbeddedResource Update="View\Pages\Options\Logradouro_por_Bairro_e_Cidade.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="View\Pages\Menu\" />
   </ItemGroup>
 </Project>

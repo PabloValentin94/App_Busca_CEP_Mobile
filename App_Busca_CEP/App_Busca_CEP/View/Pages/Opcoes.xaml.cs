@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using App_Busca_CEP.View;
+using App_Busca_CEP.View.Pages.Options;
 
-namespace App_Busca_CEP
+namespace App_Busca_CEP.View.Pages
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]

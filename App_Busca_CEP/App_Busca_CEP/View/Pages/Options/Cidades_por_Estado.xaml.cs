@@ -12,7 +12,7 @@ using System.Collections.ObjectModel;
 using App_Busca_CEP.Model;
 using App_Busca_CEP.Service;
 
-namespace App_Busca_CEP.View
+namespace App_Busca_CEP.View.Pages.Options
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Cidades_por_Estado : ContentPage

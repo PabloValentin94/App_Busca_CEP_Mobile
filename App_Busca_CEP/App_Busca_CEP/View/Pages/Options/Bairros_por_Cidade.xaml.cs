@@ -13,7 +13,7 @@ using App_Busca_CEP.Model;
 using App_Busca_CEP.Service;
 using Xamarin.Forms.Internals;
 
-namespace App_Busca_CEP.View
+namespace App_Busca_CEP.View.Pages.Options
 {
 
 
