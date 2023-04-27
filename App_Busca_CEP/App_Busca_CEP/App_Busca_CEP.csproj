@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="View\Assets\Images\Localizacao.png" />
+    <None Remove="View\Assets\Images\Logo_menu.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="View\Assets\Images\Localizacao.png">
+    <EmbeddedResource Include="View\Assets\Images\Logo_menu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -42,17 +42,21 @@
     <EmbeddedResource Update="Opcoes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\CEPs_por_Logradouro.xaml">
+    <EmbeddedResource Update="View\Pages\Options\CEPs_por_Logradouro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Cidades_por_Estado.xaml">
+    <EmbeddedResource Update="View\Pages\Options\Cidades_por_Estado.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Endereco_por_CEP.xaml">
+    <EmbeddedResource Update="View\Pages\Options\Endereco_por_CEP.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Logradouro_por_Bairro_e_Cidade.xaml">
+    <EmbeddedResource Update="View\Pages\Options\Logradouro_por_Bairro_e_Cidade.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="View\Pages\Menu\" />
   </ItemGroup>
 </Project>

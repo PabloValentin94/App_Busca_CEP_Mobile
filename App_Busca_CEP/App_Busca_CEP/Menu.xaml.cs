@@ -22,9 +22,16 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
-            img_logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
+            img_logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Logo_menu.png");
 
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Home)));
+
+        }
+
+        private void btn_home_Clicked(object sender, EventArgs e)
+        {
+
+
 
         }
 
@@ -39,6 +46,11 @@ namespace App_Busca_CEP
         {
 
 
+
+        }
+
+        private void btn_sobre_turma_Clicked(object sender, EventArgs e)
+        {
 
         }
 
