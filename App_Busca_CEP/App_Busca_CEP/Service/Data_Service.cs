@@ -55,8 +55,8 @@ namespace App_Busca_CEP.Service
             using(HttpClient cliente = new HttpClient())
             {
 
-                HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
-                //HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/bairro/by-cidade?id_cidade=" + id_cidade);
+                //HttpResponseMessage resposta = await cliente.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
+                HttpResponseMessage resposta = await cliente.GetAsync("http://10.0.2.2:8000/bairro/by-cidade?id_cidade=" + id_cidade);
 
                 if (resposta.IsSuccessStatusCode)
                 {

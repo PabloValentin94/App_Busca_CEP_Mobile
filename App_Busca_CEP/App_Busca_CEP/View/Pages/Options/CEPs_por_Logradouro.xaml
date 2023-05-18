@@ -3,52 +3,84 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Busca_CEP.View.Pages.Options.CEPs_por_Logradouro"
              Style="{ StaticResource Fundo_Paginas }">
-    
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="Botao" TargetType="Button">
+
+                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+                <Setter Property="BorderWidth" Value="4"/>
+                <Setter Property="BorderColor" Value="#4682B4"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="TextColor" Value="#4682B4"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="CornerRadius" Value="50"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        
-        <StackLayout Padding="10,0,10,0">
 
-            <StackLayout>
+        <ScrollView>
 
-                <SearchBar x:Name="txt_logradouro" TextColor="#FFFFFF"
-                           Placeholder="Informe seu logradouro aqui"/>
-                
-                <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
+            <StackLayout Spacing="15" Padding="15">
+
+                <StackLayout>
+
+                    <SearchBar x:Name="txt_logradouro" TextColor="#000000"
+                           Placeholder="Informe seu logradouro aqui"
+                               BackgroundColor="#FFFFFF"/>
+
+                    <Button x:Name="btn_busca" Text="Buscar"
+                            Clicked="btn_busca_Clicked"
+                            Style="{ StaticResource Botao }"/>
+
+                </StackLayout>
+
+                <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
+
+                <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
+
+                    <Label Text="CEPs" Style="{ StaticResource Label_Opcoes }"/>
+
+                </Frame>
+
+                <Frame Padding="5" CornerRadius="10">
+
+                    <ListView x:Name="listagem_ceps" HasUnevenRows="True"
+                              BackgroundColor="#FFFFFF" Margin="0">
+
+                        <ListView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <ViewCell>
+
+                                    <Frame Style="{ StaticResource Frame_Listagem_Campos }">
+
+                                        <Label Text="{ Binding cep }"
+                                               Style="{ StaticResource Label_Listagem }"/>
+
+                                    </Frame>
+
+                                </ViewCell>
+
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Frame>
 
             </StackLayout>
 
-            <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
-
-            <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
-
-                <Label Text="CEPs" Style="{ StaticResource Label_Listagem }"/>
-
-            </Frame>
-
-            <ListView x:Name="listagem_ceps" HasUnevenRows="True">
-
-                <ListView.ItemTemplate>
-
-                    <DataTemplate>
-
-                        <ViewCell>
-
-                            <Frame Style="{ StaticResource Frame_Listagem_Campos }">
-
-                                <Label Text="{ Binding cep }"
-                                       Style="{ StaticResource Label_Listagem }"/>
-
-                            </Frame>
-
-                        </ViewCell>
-                        
-                    </DataTemplate>
-                    
-                </ListView.ItemTemplate>
-
-            </ListView>
-
-        </StackLayout>
+        </ScrollView>
         
     </ContentPage.Content>
     

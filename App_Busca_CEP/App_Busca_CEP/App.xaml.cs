@@ -15,6 +15,8 @@ namespace App_Busca_CEP
 
             MainPage = new Menu();
 
+            //MainPage = new View.Pages.Options.Logradouro_por_Bairro_e_Cidade();
+
         }
 
         protected override void OnStart()

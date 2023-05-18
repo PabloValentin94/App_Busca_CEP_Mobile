@@ -3,54 +3,87 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Busca_CEP.View.Pages.Options.Cidades_por_Estado"
              Style="{ StaticResource Fundo_Paginas }">
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="Botao" TargetType="Button">
+
+                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+                <Setter Property="BorderWidth" Value="4"/>
+                <Setter Property="BorderColor" Value="#4682B4"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="TextColor" Value="#4682B4"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="CornerRadius" Value="50"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
     
     <ContentPage.Content>
 
-        <StackLayout Padding="10,0,10,0">
+        <ScrollView>
 
-            <StackLayout>
+            <StackLayout Spacing="15" Padding="15">
 
-                <Picker x:Name="pck_estado" TextColor="#FFFFFF"
-                        SelectedIndexChanged="pck_estado_SelectedIndexChanged"/>
+                <StackLayout>
 
-                <Button x:Name="btn_busca" Text="Buscar" Clicked="btn_busca_Clicked"/>
+                    <Label Text="Selecione o estado:" Style="{ StaticResource Label_Opcoes }"/>
+
+                    <Picker x:Name="pck_estado" Style="{ StaticResource Pickers_Aplicacao }"
+                            SelectedIndexChanged="pck_estado_SelectedIndexChanged"/>
+
+                    <Button x:Name="btn_busca" Text="Buscar"
+                            Clicked="btn_busca_Clicked"
+                            Style="{ StaticResource Botao }"/>
+
+                </StackLayout>
+
+                <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
+
+                <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
+
+                    <Label Text="CIDADES" Style="{ StaticResource Label_Opcoes }"/>
+
+                </Frame>
+
+                <Frame Padding="5" CornerRadius="10">
+
+                    <ListView x:Name="listagem_cidades" HasUnevenRows="True"
+                              BackgroundColor="#FFFFFF" Margin="0">
+
+                        <ListView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <ViewCell>
+
+                                    <Frame Style="{ StaticResource Frame_Listagem_Campos }">
+
+                                        <Label Text="{ Binding descricao }"
+                                               Style="{ StaticResource Label_Listagem }"
+                                               HorizontalOptions="Center"
+                                               HorizontalTextAlignment="Center"/>
+
+                                    </Frame>
+
+                                </ViewCell>
+
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </Frame>
 
             </StackLayout>
 
-            <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
-
-            <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
-
-                <Label Text="CIDADES" Style="{ StaticResource Label_Listagem }"/>
-
-            </Frame>
-
-            <ListView x:Name="listagem_cidades" HasUnevenRows="True">
-
-                <ListView.ItemTemplate>
-
-                    <DataTemplate>
-
-                        <ViewCell>
-
-                            <Frame Style="{ StaticResource Frame_Listagem_Campos }">
-
-                                <Label Text="{ Binding descricao }"
-                                       Style="{ StaticResource Label_Listagem }"
-                                       HorizontalOptions="Center"
-                                       HorizontalTextAlignment="Center"/>
-
-                            </Frame>
-
-                        </ViewCell>
-
-                    </DataTemplate>
-
-                </ListView.ItemTemplate>
-
-            </ListView>
-
-        </StackLayout>
+        </ScrollView>
 
     </ContentPage.Content>
     
