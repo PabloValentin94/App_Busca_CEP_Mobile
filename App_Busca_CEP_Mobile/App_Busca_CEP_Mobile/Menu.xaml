@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="App_Busca_CEP_Mobile.Menu">
+
+    <!-- O que irá aparecer no Menu. -->
+
+    <MasterDetailPage.Master>
+
+        <ContentPage Title="Menu" Style="{ StaticResource Fundo_Paginas }">
+
+            <ContentPage.Resources>
+
+                <ResourceDictionary>
+
+                    <Style x:Key="Botoes_Menu" TargetType="Button">
+
+                        <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+                        <Setter Property="BorderWidth" Value="4"/>
+                        <Setter Property="BorderColor" Value="#4682B4"/>
+                        <Setter Property="Padding" Value="15"/>
+                        <Setter Property="TextColor" Value="#4682B4"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="CornerRadius" Value="50"/>
+
+                    </Style>
+
+                    <Style x:Key="Label_Menu" TargetType="Label">
+
+                        <Setter Property="TextColor" Value="#FFFF00"/>
+                        <Setter Property="FontSize" Value="Medium"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+
+                    </Style>
+                    
+                </ResourceDictionary>
+                
+            </ContentPage.Resources>
+
+            <ContentPage.Content>
+
+                <Grid ColumnDefinitions="*" RowDefinitions="200, Auto"
+                      BackgroundColor="Transparent" Padding="15">
+
+                    <Frame Grid.Column="0" Grid.Row="0"
+                           BackgroundColor="#4682B4"
+                           VerticalOptions="Center" Padding="10"
+                           BorderColor="#FFFFFF" CornerRadius="10">
+
+                        <StackLayout>
+
+                            <Grid ColumnDefinitions="*" RowDefinitions="*">
+
+                                <Image x:Name="img_logo" Aspect="Fill"
+                                       Grid.Column="0" Grid.Row="0"/>
+
+                            </Grid>
+
+                        </StackLayout>
+
+                    </Frame>
+
+                    <ScrollView Grid.Column="0" Grid.Row="1">
+
+                        <StackLayout Spacing="15">
+
+                            <Label Text="Página Inicial:" Style="{ StaticResource Label_Menu }"/>
+
+                            <Button x:Name="btn_home"
+                                    Text="Home"
+                                    Clicked="btn_home_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
+
+                            <Label Text="Informações sobre os envolvidos:" Style="{ StaticResource Label_Menu }"/>
+
+                            <Button x:Name="btn_sobre_escola"
+                                    Text="Sobre a Escola"
+                                    Clicked="btn_sobre_escola_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
+
+                            <Button x:Name="btn_sobre_curso_DS"
+                                    Text="Sobre o curso de Desenvolvimento de Sistemas"
+                                    Clicked="btn_sobre_curso_DS_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
+
+                            <Button x:Name="btn_sobre_turma"
+                                    Text="Sobre a Turma"
+                                    Clicked="btn_sobre_turma_Clicked"
+                                    Style="{ StaticResource Botoes_Menu }"/>
+
+                        </StackLayout>
+
+                    </ScrollView>
+
+                </Grid>
+
+            </ContentPage.Content>
+
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>
