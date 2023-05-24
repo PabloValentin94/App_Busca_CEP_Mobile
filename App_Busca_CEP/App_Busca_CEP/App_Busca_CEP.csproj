@@ -11,10 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="View\Assets\Images\Logo_menu.png" />
+    <None Remove="View\Assets\Images\Localizacao.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="View\Assets\Images\Localizacao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Assets\Images\Logo_menu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

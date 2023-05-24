@@ -26,31 +26,36 @@
 
     <ContentPage.Content>
 
-        <ScrollView>
+        <ScrollView VerticalOptions="Center">
 
-            <StackLayout Spacing="15" Padding="15">
+            <Grid RowDefinitions="Auto,425" RowSpacing="15" Padding="15">
 
-                <StackLayout>
+                <StackLayout Grid.Row="0">
 
-                    <SearchBar x:Name="txt_logradouro" TextColor="#000000"
-                           Placeholder="Informe seu logradouro aqui"
-                               BackgroundColor="#FFFFFF"/>
+                    <StackLayout>
 
-                    <Button x:Name="btn_busca" Text="Buscar"
-                            Clicked="btn_busca_Clicked"
-                            Style="{ StaticResource Botao }"/>
+                        <SearchBar x:Name="txt_logradouro" TextColor="#000000"
+                                   Placeholder="Informe seu logradouro aqui"
+                                   BackgroundColor="#FFFFFF"/>
+
+                        <Button x:Name="btn_busca" Text="Buscar"
+                                Margin="0,15,0,0"
+                                Clicked="btn_busca_Clicked"
+                                Style="{ StaticResource Botao }"/>
+
+                    </StackLayout>
+
+                    <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
+
+                    <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
+
+                        <Label Text="CEPs" Style="{ StaticResource Label_Opcoes }"/>
+
+                    </Frame>
 
                 </StackLayout>
 
-                <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
-
-                <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
-
-                    <Label Text="CEPs" Style="{ StaticResource Label_Opcoes }"/>
-
-                </Frame>
-
-                <Frame Padding="5" CornerRadius="10">
+                <Frame Grid.Row="1" Padding="5" CornerRadius="10">
 
                     <ListView x:Name="listagem_ceps" HasUnevenRows="True"
                               BackgroundColor="#FFFFFF" Margin="0">
@@ -78,7 +83,7 @@
 
                 </Frame>
 
-            </StackLayout>
+            </Grid>
 
         </ScrollView>
         

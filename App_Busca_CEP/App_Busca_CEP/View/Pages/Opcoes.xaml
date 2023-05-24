@@ -16,6 +16,7 @@
                 <Setter Property="CornerRadius" Value="150"/>
                 <Setter Property="FontSize" Value="15"/>
                 <Setter Property="BackgroundColor" Value="#FFFFFF"/>
+                <Setter Property="TextColor" Value="#000000"/>
 
             </Style>
 

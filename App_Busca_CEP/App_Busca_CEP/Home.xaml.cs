@@ -21,7 +21,7 @@ namespace App_Busca_CEP
 
             InitializeComponent();
 
-            //img_logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
+            img_logo.Source = ImageSource.FromResource("App_Busca_CEP.View.Assets.Images.Localizacao.png");
 
         }
 

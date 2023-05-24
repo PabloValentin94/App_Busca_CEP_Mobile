@@ -31,7 +31,7 @@
 
             <StackLayout Padding="10" Spacing="15">
 
-                <!--<Image x:Name="img_logo" Aspect="AspectFit"/>-->
+                <Image x:Name="img_logo" Aspect="AspectFit"/>
 
                 <Button x:Name="btn_opcoes" Text="Ver Opções"
                         Clicked="btn_opcoes_Clicked"
