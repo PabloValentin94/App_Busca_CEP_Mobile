@@ -1,29 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                  x:Class="App_Busca_CEP_Mobile.Menu">
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="App_Busca_CEP_Mobile.Menu">
 
     <!-- O que irá aparecer no Menu. -->
 
-    <MasterDetailPage.Master>
+    <FlyoutPage.Flyout>
 
         <ContentPage Title="Menu" Style="{ StaticResource Fundo_Paginas }">
 
             <ContentPage.Resources>
 
                 <ResourceDictionary>
-
-                    <Style x:Key="Botoes_Menu" TargetType="Button">
-
-                        <Setter Property="BackgroundColor" Value="#FFFFFF"/>
-                        <Setter Property="BorderWidth" Value="4"/>
-                        <Setter Property="BorderColor" Value="#4682B4"/>
-                        <Setter Property="Padding" Value="15"/>
-                        <Setter Property="TextColor" Value="#4682B4"/>
-                        <Setter Property="FontAttributes" Value="Bold"/>
-                        <Setter Property="CornerRadius" Value="50"/>
-
-                    </Style>
 
                     <Style x:Key="Label_Menu" TargetType="Label">
 
@@ -64,29 +52,31 @@
 
                         <StackLayout Spacing="15">
 
-                            <Label Text="Página Inicial:" Style="{ StaticResource Label_Menu }"/>
+                            <Label Text="Página Inicial:"
+                                   Style="{ StaticResource Label_Menu }"/>
 
                             <Button x:Name="btn_home"
                                     Text="Home"
                                     Clicked="btn_home_Clicked"
-                                    Style="{ StaticResource Botoes_Menu }"/>
+                                    Style="{ StaticResource Botoes_Aplicacao }"/>
 
-                            <Label Text="Informações sobre os envolvidos:" Style="{ StaticResource Label_Menu }"/>
+                            <Label Text="Informações sobre os envolvidos:"
+                                   Style="{ StaticResource Label_Menu }"/>
 
                             <Button x:Name="btn_sobre_escola"
                                     Text="Sobre a Escola"
                                     Clicked="btn_sobre_escola_Clicked"
-                                    Style="{ StaticResource Botoes_Menu }"/>
+                                    Style="{ StaticResource Botoes_Aplicacao }"/>
 
                             <Button x:Name="btn_sobre_curso_DS"
                                     Text="Sobre o curso de Desenvolvimento de Sistemas"
                                     Clicked="btn_sobre_curso_DS_Clicked"
-                                    Style="{ StaticResource Botoes_Menu }"/>
+                                    Style="{ StaticResource Botoes_Aplicacao }"/>
 
                             <Button x:Name="btn_sobre_turma"
                                     Text="Sobre a Turma"
                                     Clicked="btn_sobre_turma_Clicked"
-                                    Style="{ StaticResource Botoes_Menu }"/>
+                                    Style="{ StaticResource Botoes_Aplicacao }"/>
 
                         </StackLayout>
 
@@ -98,6 +88,16 @@
 
         </ContentPage>
 
-    </MasterDetailPage.Master>
+    </FlyoutPage.Flyout>
 
-</MasterDetailPage>
+    <FlyoutPage.Detail>
+
+        <NavigationPage>
+            
+            
+            
+        </NavigationPage>
+        
+    </FlyoutPage.Detail>
+
+</FlyoutPage>

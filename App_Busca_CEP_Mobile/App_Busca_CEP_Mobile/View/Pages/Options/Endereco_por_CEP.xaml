@@ -4,68 +4,55 @@
              x:Class="App_Busca_CEP_Mobile.View.Pages.Options.Endereco_por_CEP"
              Style="{ StaticResource Fundo_Paginas }">
 
-    <ContentPage.Resources>
-
-        <ResourceDictionary>
-
-            <Style x:Key="Botao" TargetType="Button">
-
-                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
-                <Setter Property="BorderWidth" Value="4"/>
-                <Setter Property="BorderColor" Value="#4682B4"/>
-                <Setter Property="Padding" Value="15"/>
-                <Setter Property="TextColor" Value="#4682B4"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="CornerRadius" Value="50"/>
-
-            </Style>
-
-        </ResourceDictionary>
-
-    </ContentPage.Resources>
-
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="Center" Padding="10,0,10,0">
 
             <StackLayout>
 
-                <SearchBar x:Name="txt_cep" TextColor="#FFFFFF"
+                <SearchBar x:Name="txt_cep" TextColor="#000000"
                            Placeholder="Informe seu cep aqui"
                            BackgroundColor="#FFFFFF"/>
 
                 <Button x:Name="btn_busca" Text="Buscar"
-                        Style="{ StaticResource Botao }"
-                        Margin="0,15,0,0"
-                        Clicked="btn_busca_Clicked"/>
+                        Margin="0,15,0,0" Clicked="btn_busca_Clicked"
+                        Style="{ StaticResource Botoes_Aplicacao }"/>
 
             </StackLayout>
 
             <ActivityIndicator x:Name="ai_carregamento" IsRunning="False"/>
 
-            <Label Text="Logradouro:" TextColor="#FFFFFF" FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
-            <Label Text="{ Binding descricao }" TextColor="#FFFFFF"
+            <Label Text="Logradouro:"
+                   Style="{ StaticResource Label_Titulos }"/>
+            
+            <Label Text="{ Binding descricao }"
+                   TextColor="#FFFFFF"
                    HorizontalTextAlignment="Center"/>
 
-            <Label Text="Tipo:" TextColor="#FFFFFF" FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
+            <Label Text="Tipo:"
+                   Style="{ StaticResource Label_Titulos }"/>
+            
             <Label Text="{ Binding tipo }" TextColor="#FFFFFF"
                    HorizontalTextAlignment="Center"/>
 
-            <Label Text="Estado:" TextColor="#FFFFFF" FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
+            <Label Text="Estado:"
+                   Style="{ StaticResource Label_Titulos }"/>
+            
             <Label Text="{ Binding UF }" TextColor="#FFFFFF"
                    HorizontalTextAlignment="Center"/>
 
-            <Label Text="Complemento:" TextColor="#FFFFFF" FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
-            <Label Text="{ Binding complemento }" TextColor="#FFFFFF"
-                   HorizontalTextAlignment="Center"/>
+            <!--<Label Text="Complemento:"
+                   Style="{ StaticResource Label_Titulos }"/>
+            
+            <Label Text="{ Binding complemento }"
+                   TextColor="#FFFFFF"
+                   HorizontalTextAlignment="Center"/>-->
 
-            <Label Text="Código do IBGE:" TextColor="#FFFFFF" FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
-            <Label Text="{ Binding codigo_cidade_ibge }" TextColor="#FFFFFF"
+            <Label Text="Código do IBGE:"
+                   Style="{ StaticResource Label_Titulos }"/>
+            
+            <Label Text="{ Binding codigo_cidade_ibge }"
+                   TextColor="#FFFFFF"
                    HorizontalTextAlignment="Center"/>
 
         </StackLayout>

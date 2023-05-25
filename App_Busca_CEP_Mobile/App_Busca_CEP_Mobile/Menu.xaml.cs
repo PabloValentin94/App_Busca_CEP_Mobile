@@ -14,7 +14,7 @@ namespace App_Busca_CEP_Mobile
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Menu : MasterDetailPage
+    public partial class Menu : FlyoutPage
     {
 
         public Menu()

@@ -4,26 +4,6 @@
              x:Class="App_Busca_CEP_Mobile.View.Pages.Options.Bairros_por_Cidade"
              Style="{ StaticResource Fundo_Paginas }">
 
-    <ContentPage.Resources>
-
-        <ResourceDictionary>
-
-            <Style x:Key="Botao" TargetType="Button">
-
-                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
-                <Setter Property="BorderWidth" Value="4"/>
-                <Setter Property="BorderColor" Value="#4682B4"/>
-                <Setter Property="Padding" Value="15"/>
-                <Setter Property="TextColor" Value="#4682B4"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="CornerRadius" Value="50"/>
-
-            </Style>
-
-        </ResourceDictionary>
-        
-    </ContentPage.Resources>
-    
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="Center">
@@ -34,12 +14,12 @@
 
                     <StackLayout>
 
-                        <Label Text="Selecione o estado:" Style="{ StaticResource Label_Opcoes }"/>
+                        <Label Text="Selecione o estado:" Style="{ StaticResource Label_Titulos }"/>
 
                         <Picker x:Name="pck_estado" Style="{ StaticResource Pickers_Aplicacao }"
                                 SelectedIndexChanged="pck_estado_SelectedIndexChanged"/>
 
-                        <Label Text="Selecione a cidade:" Style="{ StaticResource Label_Opcoes }"/>
+                        <Label Text="Selecione a cidade:" Style="{ StaticResource Label_Titulos }"/>
 
                         <Picker x:Name="pck_cidade" Style="{ StaticResource Pickers_Aplicacao }"
                                 ItemDisplayBinding="{ Binding descricao }"
@@ -47,7 +27,7 @@
 
                         <Button x:Name="btn_busca" Text="Buscar"
                                 Clicked="btn_busca_Clicked"
-                                Style="{ StaticResource Botao }"/>
+                                Style="{ StaticResource Botoes_Aplicacao }"/>
 
                     </StackLayout>
 
@@ -55,7 +35,7 @@
 
                     <Frame Style="{ StaticResource Frame_Listagem_Titulos }">
 
-                        <Label Text="BAIRROS" Style="{ StaticResource Label_Opcoes }"/>
+                        <Label Text="BAIRROS" Style="{ StaticResource Label_Titulos }"/>
 
                     </Frame>
 

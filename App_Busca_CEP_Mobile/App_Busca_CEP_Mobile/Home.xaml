@@ -5,26 +5,6 @@
              Title="Home"
              Style="{ StaticResource Fundo_Paginas }">
 
-    <ContentPage.Resources>
-
-        <ResourceDictionary>
-
-            <Style x:Key="Botao" TargetType="Button">
-
-                <Setter Property="BackgroundColor" Value="#FFFFFF"/>
-                <Setter Property="BorderWidth" Value="4"/>
-                <Setter Property="BorderColor" Value="#4682B4"/>
-                <Setter Property="Padding" Value="15"/>
-                <Setter Property="TextColor" Value="#4682B4"/>
-                <Setter Property="FontAttributes" Value="Bold"/>
-                <Setter Property="CornerRadius" Value="50"/>
-
-            </Style>
-
-        </ResourceDictionary>
-
-    </ContentPage.Resources>
-    
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="Center">
@@ -35,7 +15,7 @@
 
                 <Button x:Name="btn_opcoes" Text="Ver Opções"
                         Clicked="btn_opcoes_Clicked"
-                        Style="{ StaticResource Botao }"/>
+                        Style="{ StaticResource Botoes_Aplicacao }"/>
 
             </StackLayout>
 
