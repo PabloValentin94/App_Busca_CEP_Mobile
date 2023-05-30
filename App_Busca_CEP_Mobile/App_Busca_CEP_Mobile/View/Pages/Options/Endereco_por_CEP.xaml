@@ -12,6 +12,7 @@
 
                 <SearchBar x:Name="txt_cep" TextColor="#000000"
                            Placeholder="Informe seu cep aqui"
+                           PlaceholderColor="#808080" CancelButtonColor="#808080"
                            BackgroundColor="#FFFFFF"/>
 
                 <Button x:Name="btn_busca" Text="Buscar"
